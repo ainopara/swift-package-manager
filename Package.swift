@@ -32,7 +32,8 @@ let package = Package(
                 "PackageGraph",
                 "Build",
                 "Xcodeproj",
-                "Workspace"
+                "Workspace",
+                "Commands"
             ]
         )
     ],
