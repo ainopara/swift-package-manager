@@ -485,7 +485,7 @@ public class SwiftTool<Options: ToolOptions> {
     }
 
     /// Generates a BuildPlan based on the tool's options.
-    func buildPlan() throws -> BuildPlan {
+    public func buildPlan() throws -> BuildPlan {
         return try BuildPlan(
             buildParameters: buildParameters(),
             graph: loadPackageGraph(),
