@@ -70,11 +70,9 @@ public struct Destination {
         //
         // FIXME: We may want to allow overriding this using an env variable but that
         // doesn't seem urgent or extremely useful as of now.
-        return AbsolutePath(#file).parentDirectory
-            .parentDirectory.parentDirectory.appending(components: ".build", hostTargetTriple, "debug")
+        return AbsolutePath("/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin")
       #else
-        return AbsolutePath(
-            CommandLine.arguments[0], relativeTo: originalWorkingDirectory).parentDirectory
+        return AbsolutePath("/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin")
       #endif
     }
 
