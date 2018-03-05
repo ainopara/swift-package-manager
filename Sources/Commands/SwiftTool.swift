@@ -365,6 +365,14 @@ public class SwiftTool<Options: ToolOptions> {
         }
     }
 
+    /// Generates a BuildPlan based on the tool's options.
+    public func buildPlan() throws -> BuildPlan {
+        return try BuildPlan(
+            buildParameters: buildParameters(),
+            graph: loadPackageGraph(),
+            delegate: self)
+    }
+
     class func defineArguments(parser: ArgumentParser, binder: ArgumentBinder<Options>) {
         fatalError("Must be implemented by subclasses")
     }
